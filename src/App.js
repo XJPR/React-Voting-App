@@ -29,6 +29,11 @@ class App extends Component{
 
 	decreaseVote (i) {
 		let newLanguages = [...this.state.languages];
+		if (newLanguages[i].votes == 0) {
+			newLanguages[i].votes = 0;
+		} else {
+			newLanguages[i].votes--;
+		}
 		function swap(array, i, j) {
 			var temp = array[i];
 			array[i] = array[j];
