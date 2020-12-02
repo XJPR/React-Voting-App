@@ -6,10 +6,10 @@ class App extends Component{
 		super(props);
 		this.state = {
 			languages : [
-				{name: "Php", votes: 0},
-				{name: "Python", votes: 0},
-				{name: "Go", votes: 0},
-				{name: "Java", votes: 0}
+				{name: "God of War", votes: 0},
+				{name: "The Witcher 3", votes: 0},
+				{name: "Spider-Man(PS4)", votes: 0},
+				{name: "Horizon Zero Dawn", votes: 0}
 			]
 		}
 	}
@@ -29,7 +29,7 @@ class App extends Component{
 
 	decreaseVote (i) {
 		let newLanguages = [...this.state.languages];
-		if (newLanguages[i].votes == 0) {
+		if (newLanguages[i].votes === 0) {
 			newLanguages[i].votes = 0;
 		} else {
 			newLanguages[i].votes--;
@@ -47,7 +47,7 @@ class App extends Component{
 	render(){
 		return(
 			<>
-				<h1>Vote Your Language!</h1>
+				<h1>Vote Your Favourite Video Game!</h1>
 				<div className="languages">
 					{
 						this.state.languages.map((lang, i) => 
